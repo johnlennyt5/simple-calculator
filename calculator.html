@@ -1,0 +1,64 @@
+<!-- A simple HTML document containing a calculator app -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Set the character encoding for the document -->
+        <meta charset="utf-8">
+        <!-- Configure the viewport to adjust to the device's screen size and scale -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Set the title of the page -->
+        <title> Simple Calculator </title>
+        <!-- Link to the external CSS file -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Create a container to center the calculator in the middle of the screen -->
+        <div class="container">
+            <!-- Create a calculator div to style the calculator app -->
+            <div class="calculator">
+                <!-- Create a form element to group the calculator buttons -->
+                <form>
+                    <!-- Create a div to hold the display screen -->
+                    <div class= "display">
+                        <input type= "text" name="display">
+                    </div>
+                    <!-- Create a div to hold the operator buttons -->
+                    <div>
+                        <input type="button" value="AC" onclick="display.value =''" class="operator">
+                        <input type="button" value="DE" onclick="display.value =display.value.toString().slice(0,-1)" class="operator">
+                        <input type="button" value="." onclick="display.value +='.'" class="operator">
+                        <input type="button" value="/" onclick="display.value +='/'" class="operator">
+                    </div>
+                    <!-- Create a div to hold the first row of numeric buttons -->
+                    <div>
+                        <input type="button" value="1" onclick="display.value +='1'">
+                        <input type="button" value="2" onclick="display.value +='2'">
+                        <input type="button" value="3" onclick="display.value +='3'">
+                        <input type="button" value="+" onclick="display.value +='+'" class="operator">
+                    </div>
+                    <!-- Create a div to hold the second row of numeric buttons -->
+                    <div>
+                        <input type="button" value="4" onclick="display.value +='4'">
+                        <input type="button" value="5" onclick="display.value +='5'">
+                        <input type="button" value="6" onclick="display.value +='6'">
+                        <input type="button" value="-" onclick="display.value +='-'" class="operator">
+                    </div>
+                    <!-- Create a div to hold the third row of numeric buttons -->
+                    <div>
+                        <input type="button" value="7" onclick="display.value +='7'">
+                        <input type="button" value="8" onclick="display.value +='8'">
+                        <input type="button" value="9" onclick="display.value +='9'">
+                        <input type="button" value="*" onclick="display.value +='*'" class="operator">
+                    </div>
+                    <!-- Create a div to hold the last row of numeric and equal buttons -->
+                    <div>
+                        <input type="button" value="00" onclick="display.value +='00'">
+                        <input type="button" value="0"  onclick="display.value +='0'">
+                        <input type="button" value="="  onclick="display.value = eval(display.value)" 
+                        class="equal operator" >
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
